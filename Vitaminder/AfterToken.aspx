@@ -59,9 +59,51 @@
             <h1>Vitaminder Vitamin Management</h1>
             <asp:Literal ID="litResult" runat="server"></asp:Literal>
 
-            <div class="well"><asp:Literal ID="litTokens" runat="server"></asp:Literal></div>
+            <div class="alert alert-warning" role="alert">
+                <p>Qty: 150</p>
+                <p>Dose: 10/day</p>
+            </div>
 
-            <asp:Button ID="btnReplenish" runat="server" Text="Replenish Vitamins" CssClass="btn btn-primary btn-lg" />
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-success btn-lg">Mon</button>
+                    <button type="button" class="btn btn-success btn-lg">Tue</button>
+                    <button type="button" class="btn btn-success btn-lg">Wed</button>
+                    <button type="button" class="btn btn-success btn-lg">Thu</button>
+                    <button type="button" class="btn btn-success btn-lg">Fri</button>
+                    <button type="button" class="btn btn-success btn-lg">Sat</button>
+                    <button type="button" class="btn btn-success btn-lg">Sun</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <asp:Button ID="btnReplenish" runat="server" Text="Mon" CssClass="btn btn-primary btn-lg" />
+                    <button type="button" class="btn btn-warning btn-lg">Tue</button>
+                    <button type="button" class="btn btn-warning btn-lg">Wed</button>
+                    <button type="button" class="btn btn-warning btn-lg">Thu</button>
+                    <button type="button" class="btn btn-warning btn-lg">Fri</button>
+                    <button type="button" class="btn btn-warning btn-lg">Sat</button>
+                    <button type="button" class="btn btn-warning btn-lg">Sun</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-warning btn-lg">Mon</button>
+                    <button type="button" class="btn btn-default btn-lg">Tue</button>
+                    <button type="button" class="btn btn-default btn-lg">Wed</button>
+                    <button type="button" class="btn btn-default btn-lg">Thu</button>
+                    <button type="button" class="btn btn-default btn-lg">Fri</button>
+                    <button type="button" class="btn btn-default btn-lg">Sat</button>
+                    <button type="button" class="btn btn-default btn-lg">Sun</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-lg">Mon</button>
+                    <button type="button" class="btn btn-default btn-lg">Tue</button>
+                    <button type="button" class="btn btn-default btn-lg">Wed</button>
+                    <button type="button" class="btn btn-default btn-lg">Thu</button>
+                    <button type="button" class="btn btn-default btn-lg">Fri</button>
+                    <button type="button" class="btn btn-default btn-lg">Sat</button>
+                    <button type="button" class="btn btn-default btn-lg">Sun</button>
+                </div>
+            </div>
+
+            <div class="well"><asp:Literal ID="litTokens" runat="server"></asp:Literal></div>
 
             <hr>
 
