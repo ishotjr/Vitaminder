@@ -61,7 +61,7 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0g
 
                 var result = await httpClient.PostAsync("/replenish/4c8746c0-91cf-40ac-a001-daca4ab0aa1c", noContent);
                 string resultContent = await result.Content.ReadAsStringAsync();
-                litResult.Text = resultContent;
+                litResult.Text = "<div class=\"alert alert-success\" role=\"alert\">" + resultContent + "</div>";
 
                 // TODO: error handling!
             }
