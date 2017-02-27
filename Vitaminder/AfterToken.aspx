@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AfterToken.aspx.cs" Inherits="Vitaminder.AfterToken" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AfterToken.aspx.cs" Inherits="Vitaminder.AfterToken" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,11 @@
 
         <h1>Vitaminder AfterToken</h1>
 
-        <p>TODO</p>
+        <p><asp:Literal ID="litTokens" runat="server"></asp:Literal></p>
+
+        <asp:Button ID="btnReplenish" runat="server" Text="Replenish Vitamins" />
+
+        <p><asp:Literal ID="litResult" runat="server"></asp:Literal></p>
 
     </form>
 </body>

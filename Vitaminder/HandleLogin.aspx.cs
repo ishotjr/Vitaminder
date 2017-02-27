@@ -79,6 +79,9 @@ token_type=bearer
                 litResult.Text += "] RefreshToken: [";
                 litResult.Text += Session["RefreshToken"];
                 litResult.Text += "]";
+
+                litResult.Text += "<hr><a href=\"AfterToken.aspx\">Continue</a>";
+                // TODO: automatically redirect on success?
             }
 
             catch (HttpRequestException hre)
