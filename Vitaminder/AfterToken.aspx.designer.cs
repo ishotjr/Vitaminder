@@ -10,7 +10,7 @@
 namespace Vitaminder {
     
     
-    public partial class HandleLogin {
+    public partial class AfterToken {
         
         /// <summary>
         /// frmMain control.
@@ -20,23 +20,5 @@ namespace Vitaminder {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm frmMain;
-        
-        /// <summary>
-        /// litCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litCode;
-        
-        /// <summary>
-        /// litResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litResult;
     }
 }
