@@ -7,10 +7,20 @@ using System.Web.UI.WebControls;
 
 using System.Net.Http; // for HttpClient
 using System.Threading.Tasks; // for TaskCanceledException
+using Newtonsoft.Json; // for JSON deserializing 
 
 
 namespace Vitaminder
 {
+    // for JSON parsing
+    public class LwaResponse
+    {
+        public string access_token { get; set;  }
+        public int expires_in { get; set; }
+        public string refresh_token { get; set; }
+        public string token_type { get; set; }
+    }
+
     public partial class HandleLogin : System.Web.UI.Page
     {
         protected async void Page_Load(object sender, EventArgs e)
@@ -56,7 +66,19 @@ token_type=bearer
 
                 var result = await httpClient.PostAsync("/auth/o2/token", formContent);
                 string resultContent = await result.Content.ReadAsStringAsync();
-                litResult.Text = resultContent;
+                //litResult.Text = resultContent;
+
+                // TODO: error handling!
+                LwaResponse response = JsonConvert.DeserializeObject<LwaResponse>(resultContent);
+                Session["AccessToken"] = response.access_token;
+                Session["RefreshToken"] = response.refresh_token;
+
+                litResult.Text = "<hr><em>" + resultContent + "</em><br><hr>";
+                litResult.Text += "AccessToken: [";
+                litResult.Text += Session["AccessToken"];
+                litResult.Text += "] RefreshToken: [";
+                litResult.Text += Session["RefreshToken"];
+                litResult.Text += "]";
             }
 
             catch (HttpRequestException hre)
